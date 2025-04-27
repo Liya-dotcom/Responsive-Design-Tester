@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Responsive Design Tester</title>
+</head>
+<body>
+    <div class="responsive-tester fixed-version">
+        <h3><i class="fas fa-mobile-screen"></i> Responsive Design Tester</h3>
+        
+        <!-- Device Selection -->
+        <div class="device-selection">
+          <button type="button" data-width="375" class="active">
+            <i class="fas fa-mobile"></i> Mobile
+          </button>
+          <button type="button" data-width="768">
+            <i class="fas fa-tablet"></i> Tablet
+          </button>
+          <button type="button" data-width="1024">
+            <i class="fas fa-laptop"></i> Laptop
+          </button>
+          <button type="button" data-width="100%">
+            <i class="fas fa-desktop"></i> Desktop
+          </button>
+        </div>
+        
+        <!-- URL Input -->
+        <div class="url-input-group">
+          <input 
+            type="url" 
+            id="responsiveUrl" 
+            placeholder="https://example.com" 
+            value="https://www.wikipedia.org"
+          >
+          <button id="loadUrl" type="button">
+            <i class="fas fa-arrow-right"></i> Load
+          </button>
+        </div>
+        
+        <!-- Preview Frame with Safe Fallback -->
+        <div class="preview-wrapper">
+          <iframe 
+            id="responsiveFrame" 
+            src="about:blank"
+            sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
+            title="Responsive Design Preview"
+          ></iframe>
+          <div class="frame-fallback">
+            <p>Enter a URL and click "Load" to preview</p>
+          </div>
+        </div>
+        
+        <!-- Resolution Display -->
+        <div class="resolution-display">
+          Viewport: <span id="viewportSize">375×667</span>
+        </div>
+      </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
